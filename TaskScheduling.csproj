@@ -9,15 +9,62 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.12" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="7.0.5" />
+
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="WeatherForecast.cs" />
-    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="Models\UserModel\**" />
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Mappings\UserMap.cs" />
+    <Compile Remove="Controllers\UserGetController.cs" />
+    <Compile Remove="Controllers\UserCreateController.cs" />
+    <Compile Remove="Models\UserModel.cs" />
+    <Compile Remove="Services\UserGetService.cs" />
+    <Compile Remove="Services\UserCreateService.cs" />
+    <Compile Remove="Services\TokenService.cs" />
+    <Compile Remove="Schemas\SchemaUpdate.cs" />
+    <Compile Remove="Schemas\SchemaUserGet.cs" />
+    <Compile Remove="Schemas\SchemaPost.cs" />
+    <Compile Remove="Schemas\SchemaGetTitle.cs" />
+    <Compile Remove="Schemas\SchemaGetStatus.cs" />
+    <Compile Remove="Schemas\SchemaGetRead.cs" />
+    <Compile Remove="Schemas\SchemaGetId.cs" />
+    <Compile Remove="Schemas\SchemaGetDate.cs" />
+    <Compile Remove="Schemas\SchemaGet.cs" />
+    <Compile Remove="Schemas\SchemaDelete.cs" />
+    <Compile Remove="Migrations\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <EmbeddedResource Remove="Models\UserModel\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Models\UserModel\**" />
+    <Content Remove="Interfaces\**" />
+    <Content Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Models\UserModel\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Migrations\**" />
   </ItemGroup>
 
 </Project>
